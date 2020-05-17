@@ -1,16 +1,14 @@
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export EDITOR='vim'
 
-PS1='\[$(tput bold)\]';
-PS1+='\[$(tput setaf 112)\]\u ';       #user settings
-#PS1+='\[$(tput setaf 111)\]@\h ';     #host settings
-PS1+='\[$(tput setaf 39)\]\w/: ';      #current directory setting
-PS1+='\[$(tput sgr0)\]';               #reset
-export PS1;
+ export PS1="\[\033[38;5;14m\]\u\[$(tput sgr0)\].\[$(tput sgr0)\]\[\033[38;5;82m\]\h\[$(tput sgr0)\]: \[$(tput sgr0)\]\[\033[38;5;    190m\]\w\[$(tput sgr0)\] \\$ \[$(tput sgr0)\]"
 
 alias ll='ls -lahG'
 alias ..='cd ..'
 alias py='python3'
- 
+
 shopt -s autocd
 shopt -s cdspell
+
+
+#font: cousine for Powerline 12 pt
